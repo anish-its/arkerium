@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .introbody{
+        @apply flex items-center justify-around min-h-[35rem] flex-wrap;
+        /* background-color: #1f1f1f; */
+        /* background:linear-gradient(135deg, #150140 10%, #1c106b 50%, #120337 90%); */
+        background-color: #F44336;
+    }
+    .introhead{
+        @apply flex flex-col gap-5 text-center font-serif;
+    }
+    .introheadh1{
+        @apply text-6xl font-light;
+        animation: h1opacity 4s;
+    }
+    @keyframes h1opacity{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .introheadp{
+        @apply text-xl px-16 text-[#87ceeb];
+    }
+    .introImg{
+        width: 100%;
+        filter: invert();
+        height: 35rem;
+        padding: 2rem;
+    }
+    /* .intro3d{
+        width: 100% !important;
+        height: 100% !important;
+    } */
+    /* .intro3d > canvas{
+        @apply mt-12;
+        transform: scale3d(1, 1, 1);
+    } */
+    @screen md{
+        .introbody{
+            @apply flex-nowrap;
+        }
+        .introImg{
+            width: 50%;
+        }
+        /* .intro3d{
+            width: 100% !important;
+            height: 100% !important;
+        } */
+        /* .intro3d > canvas{
+            @apply mt-0;
+            transform: scale3d(1, 1, 1);
+        } */
+    }
+}

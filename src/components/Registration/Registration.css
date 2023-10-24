@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .regmain{
+        @apply flex items-center flex-col justify-center w-full min-h-screen;
+        /* background-color: rgb(22, 12, 1); */
+        background-color: rgb(35, 39, 60);
+        background-image: url('../../../public/logo/logobg1-removebg.png');
+        background-size:75%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .reghead{
+        font-family:initial;
+        color: var(--primaryColor);
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        filter: drop-shadow(5px 10px 10px black);
+    }
+    .regbody{
+        @apply flex justify-evenly flex-col max-w-full w-[27rem] h-[32rem] gap-6 p-5 border rounded-md mx-3 z-10;
+        background-color: rgba(53, 54, 55, 0.95);
+    }
+    .regimg{
+        @apply flex justify-center p-4;
+    }
+    .reglogo{
+        @apply h-16;
+    }
+    .reguserpass{
+        @apply flex flex-col gap-5;
+    }
+    .reginputbox{
+        @apply border rounded-[4px] p-2 w-full overflow-hidden;
+    }
+    .reginputboxpass{
+        @apply pr-9;
+    }
+    .regpasswd{
+        @apply flex items-center justify-end;
+    }
+    .regforgot{
+        @apply flex justify-end;
+    }
+    .regforgotbox{
+        @apply cursor-pointer;
+        color: var(--primaryColor);
+    }
+    .regbtnnewregbtn{
+        @apply border rounded-md h-10 cursor-pointer;
+        color: var(--primaryColor);
+        background-color: var(--secondaryColor);
+    }
+    .regbtnnewreg{
+        @apply flex flex-col gap-2;
+    }
+    .regbtnnewregbox{
+        @apply flex gap-3 justify-end;
+    }
+    .regbtnnewregmsg{
+        @apply justify-center;
+        color: var(--primaryColor);
+    }
+    .regbtnnewregreg{
+        @apply justify-center cursor-pointer;
+        color: var(--secondaryColor);
+    }
+    @screen sm{
+        .regbody{
+            @apply mx-0;
+        }
+    }
+}

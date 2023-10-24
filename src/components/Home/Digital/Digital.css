@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .digitalbody{
+        @apply min-h-screen w-auto flex flex-col p-6 gap-3;
+        /* background-color:#4b2fffe0; */
+        /* background-color: #1486ff; */
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+    .digitalhead{
+        @apply text-blue-900 font-serif font-normal text-center;
+    }
+    .digitalheadsub{
+        @apply flex flex-col items-center text-slate-950 font-serif gap-3;
+    }
+    .digitalheadsubh1{
+        @apply font-bold text-3xl;
+    }
+    .digitalheadsubspan{
+        @apply px-14 text-center font-medium;
+    }
+    .digitalmain{
+        @apply flex justify-center items-center pt-8 px-8 flex-wrap;
+    }
+    .digitalmainsub{
+        @apply flex flex-col items-center;
+    }
+    .digitalmainh1{
+        @apply font-[500] text-3xl font-serif text-slate-900 text-center;
+    }
+    .digitaltimeline{
+        @apply mx-5 p-5;
+    }
+    .digitalouter {
+        border-left: 2px solid #333;
+    }
+    .digitalcard{
+        @apply relative m-4 p-3 bg-[#333] text-gray-500 max-w-sm border rounded-lg;
+    }
+    .digitalinfo{
+        @apply flex flex-col gap-2;
+    }
+    .digitaltitle{
+        @apply relative text-[orangered];
+    }
+    .digitaltitle::before {
+        @apply absolute w-2 h-2 bg-[white] border rounded-[999px] left-[-34px];
+        content: "";
+        border: 3px solid orangered;
+    }
+    @screen md{
+        .digitalmain{
+            flex-wrap:nowrap;
+        }
+        .digitalmainimg{
+            width:50%;
+        }
+    }
+}

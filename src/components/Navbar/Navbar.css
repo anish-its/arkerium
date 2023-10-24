@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+   .nav-main{
+      @apply bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50;
+      background-color: #251d1d;
+   }
+   .nav-sub{
+      @apply max-w-full flex flex-wrap items-center justify-between py-4 px-10;
+   }
+   .nav-title{
+      @apply self-center text-2xl font-semibold whitespace-nowrap dark:text-white;
+   }
+   .nav-button{
+      @apply inline-flex items-center p-2 w-10 h-10 justify-center text-sm 
+      text-gray-500 rounded-lg md:hidden hover:bg-gray-100 
+      focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 
+      dark:hover:bg-gray-700 dark:focus:ring-gray-600;
+   }
+   .nav-menu{
+      @apply w-full hidden justify-end;
+   }
+   .nav-list{
+      @apply font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50
+      dark:bg-gray-800 dark:border-gray-700 absolute w-1/2;
+      background-color: #251d1d;
+   }
+   .nav-list-item{
+      @apply block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 
+      dark:text-white dark:hover:bg-gray-700 dark:hover:text-white;
+   }
+   .active{
+      @apply block py-2 pl-3 pr-4 text-white bg-blue-700 rounded dark:text-white;
+   }
+
+   @screen md{
+      .nav-menu{
+         @apply block w-auto;
+      }
+      .nav-list{
+         @apply p-0 space-x-8 flex-row mt-0 border-0 bg-white dark:bg-gray-900 w-full;
+         background-color:#251d1d;
+         position: unset;
+      }
+      .nav-list-item{
+         @apply hover:bg-transparent border-0 hover:text-blue-700 p-0 dark:hover:text-blue-500
+         dark:hover:bg-transparent;
+      }
+      .active{
+         @apply bg-transparent text-blue-700 p-0 dark:text-blue-500;
+      }
+   }
+}
